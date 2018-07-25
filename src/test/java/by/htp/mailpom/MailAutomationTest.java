@@ -9,6 +9,7 @@ import by.htp.mailpom.steps.Steps;
 public class MailAutomationTest {
 	
 	private Steps steps;
+	
 	private final String USERNAME = "tathtp";
 	private final String PASSWORD = "Klopik123";
 	
