@@ -23,9 +23,12 @@ public class LoginPage extends AbstractPage {
 	}
 
 	public void login(String username, String password) {
-		inputLogin.findElement(By.xpath("//div[@id='mailbox:loginContainer']/child::*")).sendKeys(username);
-		inputPass.findElement(By.xpath("//div[@class='mailbox__input__container']/child::*[1]")).sendKeys(password);
-		buttonSubmit.findElement(By.xpath("//input[@class='o-control']")).click();
+		inputLogin = driver.findElement(By.xpath("//div[@id='mailbox:loginContainer']/child::*"));
+		inputLogin.sendKeys(username);
+		inputPass = driver.findElement(By.xpath("//div[@class='mailbox__input__container']/child::*[1]"));
+		inputPass.sendKeys(password);
+		buttonSubmit = driver.findElement(By.xpath("//input[@class='o-control']"));
+		buttonSubmit.click();
 	}
 
 }

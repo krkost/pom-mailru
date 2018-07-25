@@ -20,7 +20,7 @@ public class MailAutomationTest {
 	}
 	
 	@Test
-	public void oneCanLoginGithub()
+	public void oneCanLoginMailRu()
 	{
 		steps.loginMail(USERNAME, PASSWORD);
 		Assert.assertNotNull(steps);
