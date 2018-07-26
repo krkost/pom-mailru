@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import by.htp.mailpom.driver.DriverSingleton;
 import by.htp.mailpom.pages.InboxMessagesPage;
 import by.htp.mailpom.pages.LoginPage;
+import by.htp.mailpom.pages.NewEmailPage;
 
 public class Steps {
 	
@@ -27,14 +28,15 @@ public class Steps {
 		loginPage.login(username, password);
 	}
 	
-	public void clickNewEmail(String username, String password) throws InterruptedException {
-		loginMail(username, password);
+	public void clickNewEmail() throws InterruptedException {
 		InboxMessagesPage inMesPage = new InboxMessagesPage(driver);
 		inMesPage.clickNewEmailBtn();
 	}
 	
-	public void sendMail(String username, String password) {
-		
+	public void sendMail(String receiver, String subject, String body) throws InterruptedException {
+		NewEmailPage newEmPage = new NewEmailPage(driver);
+		newEmPage.InputFieldsNewEmail(receiver, subject, body);
 	}
+
 
 }
