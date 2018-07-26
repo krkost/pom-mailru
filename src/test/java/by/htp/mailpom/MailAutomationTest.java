@@ -24,7 +24,14 @@ public class MailAutomationTest {
 	public void oneCanLoginMailRu()
 	{
 		steps.loginMail(USERNAME, PASSWORD);
-		Assert.assertNotNull(steps);
+		steps.closeDriver();
+	}
+	
+	@Test
+	public void initNewEmail() throws InterruptedException {
+		steps.clickNewEmail(USERNAME, PASSWORD);
+		
+		steps.closeDriver();
 	}
 
 }

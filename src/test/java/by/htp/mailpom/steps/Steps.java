@@ -3,6 +3,7 @@ package by.htp.mailpom.steps;
 import org.openqa.selenium.WebDriver;
 
 import by.htp.mailpom.driver.DriverSingleton;
+import by.htp.mailpom.pages.InboxMessagesPage;
 import by.htp.mailpom.pages.LoginPage;
 
 public class Steps {
@@ -24,6 +25,16 @@ public class Steps {
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.openPage();
 		loginPage.login(username, password);
+	}
+	
+	public void clickNewEmail(String username, String password) throws InterruptedException {
+		loginMail(username, password);
+		InboxMessagesPage inMesPage = new InboxMessagesPage(driver);
+		inMesPage.clickNewEmailBtn();
+	}
+	
+	public void sendMail(String username, String password) {
+		
 	}
 
 }
